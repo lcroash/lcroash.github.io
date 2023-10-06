@@ -1,90 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<p>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liam Croash: Data Science Analyst</title>
+    <title>Data Science Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #1a1a1a;
-            color: #e4e4e4;
             margin: 0;
             padding: 0;
+            color: #f4f4f4;
         }
-
+        
         header {
             background-image: url('https://media.licdn.com/dms/image/D4E16AQE8zOvR34IrTg/profile-displaybackgroundimage-shrink_350_1400/0/1687945157889?e=1701907200&v=beta&t=g0WS90jMpC2v5QzmA3nqQy8SyYBYrODIYwisk3r3OgE');
             background-size: cover;
-            background-position: center;
             color: white;
             text-align: center;
-            padding: 4em 0;
-            position: relative;
+            padding: 5em 0;
         }
-
-        header h1 {
-            margin-bottom: 1em;
-        }
-
-        header img.profile-pic {
-            width: 120px;
-            height: 120px;
-            border-radius: 60px;
-            display: block;
-            margin: 0 auto 20px;
-        }
-
+        
         section.content {
-            max-width: 800px;
+            display: flex;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #2a2a2a;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background-color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        h2 {
-            border-bottom: 2px solid #555;
+        
+        section.content .profile-section {
+            flex: 1;
+            padding-right: 30px;
+        }
+        
+        section.content .profile-section img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        
+        section.content .about-section {
+            flex: 2;
+        }
+        
+        section.projects {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .project-tile {
+            background-color: #444;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        h2, h3 {
+            border-bottom: 2px solid #f4f4f4;
             padding-bottom: 10px;
         }
-
-        a {
-            color: #66c2ff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        p.bio {
-            font-style: italic;
-            margin-top: 20px;
-        }
-
     </style>
-</head>
-<body>
-    <header>
-        <img class="profile-pic" src="https://media.licdn.com/dms/image/C5603AQFE94AsIj5vOg/profile-displayphoto-shrink_400_400/0/1653914885604?e=1701907200&v=beta&t=m0XSEqYqRYAjrlpAGWVwI0Z7J7ImhLpuU5MWPl1PfeM" alt="Liam Croash">
-        <h1>Liam Croash: Data Science Analyst</h1>
-        <p class="bio">Data Scientist with an interest in understanding consumer behaviour and time series analysis.</p>
-    </header>
 
-    <section class="content">
-        <h2>About Me</h2>
-        <p>
-            I'm a passionate data scientist with expertise in machine learning, data analysis, and visualization. This is a brief showcase of my projects and skills.
-        </p>
 
-        <h2>Projects</h2>
+<header>
+</header>
+
+<section class="content">
+    <div class="profile-section">
+        <img src="https://media.licdn.com/dms/image/C5603AQFE94AsIj5vOg/profile-displayphoto-shrink_400_400/0/1653914885604?e=1701907200&amp;v=beta&amp;t=m0XSEqYqRYAjrlpAGWVwI0Z7J7ImhLpuU5MWPl1PfeM" alt="Liam Croash Profile Picture">
+
+    </div>
+    <div class="about-section">
+        <h2>Hi there, my name is Liam.</h2>
         <p>
-            1. Irish Housing Crisis Project (part of MSc) : <a href="https://github.com/lcroash/MSC_SEM1_CA2/blob/main/README.md">README</a> and <a href="https://github.com/lcroash/MSC_SEM1_CA2/blob/main/CA2.ipynb">notebook</a> for the project.<br>
-            2. Forecasting Methodologies in a Big Data Context (part of MSc): <a href="https://github.com/lcroash/CCT_SEM2_CA1/blob/master/README.md">README</a> and <a href="https://github.com/lcroash/CCT_SEM2_CA1">notebook</a> for the project.<br>
-            3. Instacart Cluster Analysis - Retail Customer Segmentation: <a href="https://github.com/lcroash/clustering_project/blob/master/README.md">README</a> and <a href="https://github.com/lcroash/clustering_project/blob/master/Project_Final.ipynb">notebook</a> for the project.<br>
-            4. Zomato Restaurant Analysis: <a href="https://github.com/lcroash/zomato/blob/master/README.md">README</a> and <a href="https://github.com/lcroash/zomato/blob/master/Zomato_Restaurant_Analysis.ipynb">notebook</a> for the project.<br>
-            ... and more available here  <a href="https://github.com/lcroash">GitHub home.</a>.
+            I'm a data science analyst with expertise in machine learning application, data analysis, visualisation, story-telling and enablement. <br>My interests are in understanding consumer behaviour and in time series analysis.<br>
+            This is a brief showcase of some of my projects and skills.
         </p>
-    </section>
-</body>
-</html>
+    </div>
+</section>
+
+<section class="projects">
+    <div class="project-tile">
+        <h3>Irish Housing Crisis Project</h3>
+        <p>The subject of this project is the housing crisis in Ireland and the UK.<br>
+            Analysis comtains the workflow from data ingestion, EDA, sentiment analysis to predictive time series modelling.
+
+           <li>Are newly built houses keeping up with population growth in UK &amp; Ireland?</li> <li>When did people start to talk about the housing crisis?</li> <li>Can we extract sentiment from tweets around the housing crisis?</li> 
+           <li>Will current trends in houses being built be able to accomodate the population over time?</li></p>
+        <p><a href="https://github.com/lcroash/MSC_SEM1_CA2/blob/main/README.md">README</a> and <a href="https://github.com/lcroash/MSC_SEM1_CA2/blob/main/CA2.ipynb">notebook</a></p>
+    </div>
+    <div class="project-tile">
+        <h3>Forecasting Methodologies in a Big Data Context</h3>
+        <p>This project examines the practical application of neural networks in the context of big data analytics, with a particular focus on improving time series analysis. With a focus on financial forecasting for a large retail business, the project compares advanced processing tools, machine learning technologies, and neural networks to determine the most effective ways to improve forecast accuracy. We presents a comparison of various time series analysis methods, including classical statistical approaches, machine learning models, and deep learning neural networks, highlighting their strengths and weaknesses in handling datasets with slightly different compositions.<br><br>
+
+Work is carried out leveraging Hadoop, Spark, Keras, Tensorflow, Prophet and Scikit Learn. EDA performed to analyse time series, forecasting models developed and evaluated.</p>
+        <p><a href="https://github.com/lcroash/CCT_SEM2_CA1/blob/master/README.md">README</a> and <a href="https://github.com/lcroash/CCT_SEM2_CA1">notebook</a></p>
+    </div>
+    <div class="project-tile">
+        <h3>Instacart Cluster Analysis</h3>
+        <p>This project aims to develop a set of customer segments to facilitate more effective conversion through better targeting with promotional material or offerings. “Market segmentation is to divide a market into smaller groups of buyers with distinct needs, characteristics, or behaviors who might require separate products or marketing mixes.” <br>
+
+            To develop this solution, the Instacart Historical sample shopping data (https://www.instacart.com/datasets/grocery-shopping-2017) will be used simulate typical retail data. This dataset was released initially as part of a Kaggle competition to develop robust association rules but in this case will be used to inform behaviour to identify customer segments.</p>
+        <p><a href="https://github.com/lcroash/clustering_project/blob/master/README.md">README</a> and <a href="https://github.com/lcroash/clustering_project/blob/master/Project_Final.ipynb">notebook</a></p>
+    </div>
+    <div class="project-tile">
+        <h3>Zomato Restaurant Analysis</h3>
+        <p>This analysis is an EDA of data extracted from the Zomato API. The analysis includes data cleansing, preprocessing and visualisation to explore methods of identifying the best places to eat in Balangalore. There involves text processing, rating predictions and advanced geo-visualisation.</p>
+        <p><a href="https://github.com/lcroash/zomato/blob/master/README.md">README</a> and <a href="https://github.com/lcroash/zomato/blob/master/Zomato_Restaurant_Analysis.ipynb">notebook</a></p>
+    </div>
+</section>
+<section class="content" style="justify-content: center;">
+    <p>... and more available on <a href="https://github.com/lcroash">GitHub home.</a></p>
+</section>
+</p>
