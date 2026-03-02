@@ -218,7 +218,7 @@
         }
 
         .project-card ul li::before {
-            content: '→';
+            content: '\2192';
             position: absolute;
             left: 0;
             color: #60a5fa;
@@ -262,7 +262,8 @@
             border-radius: 6px;
             font-weight: 500;
         }
-        /* Resume tweaks (reuses project-card styles) */
+
+        /* Resume tweaks */
         .resume-role p {
             font-size: 0.85rem;
             color: #64748b;
@@ -275,6 +276,11 @@
             margin: 24px 0;
         }
 
+        /* Stat highlight for resume bullets */
+        .stat {
+            color: #60a5fa;
+            font-weight: 600;
+        }
 
         /* Experience Logos Carousel */
         .experience-logos {
@@ -297,12 +303,8 @@
         }
 
         @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(calc(-200px * 7));
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-200px * 7)); }
         }
 
         .logo-item {
@@ -322,15 +324,12 @@
             opacity: 0.7;
             transition: all 0.3s ease;
         }
-        
-        
-        
 
         .logo-item:hover img {
-    opacity: 1;
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 12px rgba(96, 165, 250, 0.5));
-}
+            opacity: 1;
+            transform: scale(1.15);
+            filter: drop-shadow(0 0 12px rgba(96, 165, 250, 0.5));
+        }
 
         /* Profile Grid */
         .profile-grid {
@@ -370,7 +369,7 @@
         }
 
         .profile-list li::before {
-            content: '•';
+            content: '\2022';
             position: absolute;
             left: 0;
             color: #60a5fa;
@@ -494,55 +493,20 @@
                 text-align: center;
                 padding: 40px 24px;
             }
-
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .hero-content p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .social-links {
-                justify-content: center;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .articles-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .profile-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .experience-logos {
-                padding: 30px 0;
-            }
-
-            .logo-item {
-                min-width: 150px;
-                padding: 15px 25px;
-            }
-
-            .logo-item img {
-                height: 45px;
-                max-width: 120px;
-            }
-
-            .section-header h2 {
-                font-size: 1.5rem;
-            }
+            .hero-content h1 { font-size: 2rem; }
+            .hero-content p { margin-left: auto; margin-right: auto; }
+            .social-links { justify-content: center; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .articles-grid { grid-template-columns: 1fr; }
+            .profile-grid { grid-template-columns: 1fr; }
+            .experience-logos { padding: 30px 0; }
+            .logo-item { min-width: 150px; padding: 15px 25px; }
+            .logo-item img { height: 45px; max-width: 120px; }
+            .section-header h2 { font-size: 1.5rem; }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
-            .articles-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .articles-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         /* Floating section navigation */
@@ -587,26 +551,22 @@
             font-weight: 500;
         }
 
-        /* Hide on mobile */
         @media (max-width: 1024px) {
-            .floating-nav {
-                display: none;
-            }
+            .floating-nav { display: none; }
         }
-
     </style>
 </head>
 <body>
     <!-- Floating Section Nav -->
-<nav class="floating-nav">
-    <ul>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#writing">Writing</a></li>
-    </ul>
-</nav>
+    <nav class="floating-nav">
+        <ul>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#writing">Writing</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <!-- Hero Section -->
@@ -617,9 +577,9 @@
             <div class="hero-content">
                 <h1>Hi, I'm <span>Liam Croash</span></h1>
                 <p>
-                    A <span class="highlight">data science analyst</span> with expertise in machine learning, 
-                    data analysis, visualisation, and story-telling. Passionate about understanding 
-                    <span class="highlight">consumer behaviour</span> and <span class="highlight">time series analysis</span>.
+                    A <span class="highlight">data analytics professional</span> specialising in translating complex data into 
+                    <span class="highlight">compelling narratives</span> that drive business decisions. 10 years partnering with 
+                    Sales, CS, Product, and Engineering teams to deliver <span class="highlight">actionable insights</span> to senior leadership.
                 </p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/lcroash/" target="_blank" rel="noopener">
@@ -645,138 +605,107 @@
 
         <div class="experience-logos">
             <div class="logo-track">
-                <!-- First set -->
-                <div class="logo-item" title="MuleSoft">
-                    <img src="https://www.mulesoft.com/sites/default/files/MuleSoft_logo_299C.png" alt="MuleSoft">
-                </div>
-                <div class="logo-item" title="Intercom">
-                    <img src="https://cdn.worldvectorlogo.com/logos/intercom-1.svg" alt="Intercom">
-                </div>
-                <div class="logo-item" title="LearnUpon">
-                    <img src="https://www.learnupon.com/wp-content/uploads/learnupon-logo.png" alt="LearnUpon">
-                </div>
-                <div class="logo-item" title="Tines">
-                    <img src="https://www.pymnts.com/wp-content/uploads/2025/02/Tines-Security-Service.jpg?w=457" alt="Tines">
-                </div>
-                <div class="logo-item" title="Microsoft">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
-                </div>
-                <div class="logo-item" title="Brown Thomas">
-                    <img src="https://i2-prod.dublinlive.ie/article12011746.ece/ALTERNATES/s1200/BrownThomas_Logo_Stripes_800.jpg" alt="Brown Thomas">
-                </div>
-                <div class="logo-item" title="Lidl">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Lidl-Logo.svg" alt="Lidl">
-                </div>
-                <!-- Duplicate set for seamless loop -->
-                <div class="logo-item" title="MuleSoft">
-                    <img src="https://www.mulesoft.com/sites/default/files/MuleSoft_logo_299C.png" alt="MuleSoft">
-                </div>
-                <div class="logo-item" title="Intercom">
-                    <img src="https://cdn.worldvectorlogo.com/logos/intercom-1.svg" alt="Intercom">
-                </div>
-                <div class="logo-item" title="LearnUpon">
-                    <img src="https://www.learnupon.com/wp-content/uploads/learnupon-logo.png" alt="LearnUpon">
-                </div>
-                <div class="logo-item" title="Tines">
-                    <img src="https://www.pymnts.com/wp-content/uploads/2025/02/Tines-Security-Service.jpg?w=457" alt="Tines">
-                </div>
-                <div class="logo-item" title="Microsoft">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
-                </div>
-                <div class="logo-item" title="Brown Thomas">
-                    <img src="https://i2-prod.dublinlive.ie/article12011746.ece/ALTERNATES/s1200/BrownThomas_Logo_Stripes_800.jpg" alt="Brown Thomas">
-                </div>
-                <div class="logo-item" title="Lidl">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Lidl-Logo.svg" alt="Lidl">
-                </div>
+                <div class="logo-item" title="MuleSoft"><img src="https://www.mulesoft.com/sites/default/files/MuleSoft_logo_299C.png" alt="MuleSoft"></div>
+                <div class="logo-item" title="Intercom"><img src="https://cdn.worldvectorlogo.com/logos/intercom-1.svg" alt="Intercom"></div>
+                <div class="logo-item" title="LearnUpon"><img src="https://www.learnupon.com/wp-content/uploads/learnupon-logo.png" alt="LearnUpon"></div>
+                <div class="logo-item" title="Tines"><img src="https://www.pymnts.com/wp-content/uploads/2025/02/Tines-Security-Service.jpg?w=457" alt="Tines"></div>
+                <div class="logo-item" title="Microsoft"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft"></div>
+                <div class="logo-item" title="Brown Thomas"><img src="https://i2-prod.dublinlive.ie/article12011746.ece/ALTERNATES/s1200/BrownThomas_Logo_Stripes_800.jpg" alt="Brown Thomas"></div>
+                <div class="logo-item" title="Lidl"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Lidl-Logo.svg" alt="Lidl"></div>
+                <div class="logo-item" title="MuleSoft"><img src="https://www.mulesoft.com/sites/default/files/MuleSoft_logo_299C.png" alt="MuleSoft"></div>
+                <div class="logo-item" title="Intercom"><img src="https://cdn.worldvectorlogo.com/logos/intercom-1.svg" alt="Intercom"></div>
+                <div class="logo-item" title="LearnUpon"><img src="https://www.learnupon.com/wp-content/uploads/learnupon-logo.png" alt="LearnUpon"></div>
+                <div class="logo-item" title="Tines"><img src="https://www.pymnts.com/wp-content/uploads/2025/02/Tines-Security-Service.jpg?w=457" alt="Tines"></div>
+                <div class="logo-item" title="Microsoft"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft"></div>
+                <div class="logo-item" title="Brown Thomas"><img src="https://i2-prod.dublinlive.ie/article12011746.ece/ALTERNATES/s1200/BrownThomas_Logo_Stripes_800.jpg" alt="Brown Thomas"></div>
+                <div class="logo-item" title="Lidl"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Lidl-Logo.svg" alt="Lidl"></div>
             </div>
         </div>
 
-<!-- Resume Section -->
-<div class="section-header" id="resume">
-    <h2>Resume</h2>
-</div>
+        <!-- Resume Section -->
+        <div class="section-header" id="resume">
+            <h2>Resume</h2>
+        </div>
 
-<article class="project-card">
+        <article class="project-card">
 
-    <!-- Tines -->
-    <div class="resume-role">
-        <h3>Data Analyst (Customer Success) · Tines</h3>
-        <p><em>January 2025 – Present</em></p>
-        <ul>
-            <li>Built customer lifecycle analytics and presales health scoring to flag churn risk at deal close</li>
-            <li>Led Looker → Omni migration (50K views, 250+ dashboards, 33 builders)</li>
-            <li>Designed executive Quarterly Leadership Pack across CS, Support, RevOps, and Product</li>
-            <li>Created LLM-powered workflow categorisation with validation and hallucination handling</li>
-            <li>Partnered with engineering to resolve data quality issues and formalise telemetry</li>
-        </ul>
-    </div>
+            <!-- Tines -->
+            <div class="resume-role">
+                <h3>Data Analyst (Customer Success) &middot; Tines</h3>
+                <p><em>January 2025 &ndash; Present</em></p>
+                <ul>
+                    <li>Built customer lifecycle analytics and presales health scoring to flag churn and downgrade risk. Within <span class="stat">two fiscal quarters</span>, churn insights contributed to flattening contractions and supported one of the largest expansion quarters of the year</li>
+                    <li>Owned end-to-end BI migration (Looker &rarr; Omni): scoped requirements across <span class="stat">33 users</span>, validated metric definitions, delivered <span class="stat">250+ dashboards</span> with <span class="stat">50K views</span></li>
+                    <li>Scoped TLT-level Leadership Pack through cross-functional stakeholder interviews across PreSales, CS, Support, RevOps, and Product</li>
+                    <li>Reduced complex analytical workstreams from <span class="stat">2&ndash;3 weeks to 1&ndash;2 days</span> using LLM-assisted prototyping with full transparency &mdash; auditable deliverables enabling stakeholders to extend analyses independently</li>
+                </ul>
+            </div>
 
-    <hr class="resume-divider">
+            <hr class="resume-divider">
 
-    <!-- LearnUpon -->
-    <div class="resume-role">
-        <h3>Senior Data Analyst · LearnUpon</h3>
-        <p><em>April 2024 – January 2025</em></p>
-        <ul>
-            <li>Built customer segmentation framework for 100k+ leads; now standard for GTM targeting</li>
-            <li>Developed onboarding churn prediction MVP enabling proactive intervention</li>
-            <li>Partnered with CX and Implementation teams to surface retention drivers</li>
-        </ul>
-    </div>
+            <!-- LearnUpon -->
+            <div class="resume-role">
+                <h3>Senior Data Analyst &middot; LearnUpon</h3>
+                <p><em>April 2024 &ndash; January 2025</em></p>
+                <ul>
+                    <li>Embedded data partner for the GTM function &mdash; scoped and delivered data products for sales, CX, and senior leaders</li>
+                    <li>Partnered with executives to build customer segmentation framework across <span class="stat">100k+ leads</span>; now the standard for GTM targeting</li>
+                    <li>Improved monthly customer insight reporting (<span class="stat">~1,600 presentations</span>): reduced generation time from <span class="stat">6&ndash;8 hours to under 2</span>, enhanced accuracy and presentation quality for CSM delivery</li>
+                    <li>Developed onboarding churn prediction MVP in Python, enabling CX and Implementation teams to intervene proactively</li>
+                </ul>
+            </div>
 
-    <hr class="resume-divider">
+            <hr class="resume-divider">
 
-    <!-- Intercom -->
-    <div class="resume-role">
-        <h3>Senior Support Operations Analyst · Intercom</h3>
-        <p><em>September 2022 – April 2024</em></p>
-        <ul>
-            <li>Designed AI-driven analysis of product pain points from support tickets</li>
-            <li>Built near real-time data pipelines to support operational decision-making</li>
-            <li>Developed CSAT prediction model to prioritise proactive outreach</li>
-        </ul>
-    </div>
+            <!-- Intercom -->
+            <div class="resume-role">
+                <h3>Senior Support Operations Analyst &middot; Intercom</h3>
+                <p><em>September 2022 &ndash; April 2024</em></p>
+                <ul>
+                    <li>Identified that prior negative experience was the strongest predictor of future poor CSAT &mdash; presented to VP-level leadership, driving proactive outreach and further research across <span class="stat">130k+ interaction events</span></li>
+                    <li>Analysed <span class="stat">150k+ support conversations</span> as part of a cross-functional team; presented findings and recommendations to senior Eng, Finance, and CS leadership</li>
+                    <li>Designed AI-driven process to extract product pain points from <span class="stat">~10k annual conversations</span>, shaping the product roadmap</li>
+                </ul>
+            </div>
 
-    <hr class="resume-divider">
+            <hr class="resume-divider">
 
-    <!-- MuleSoft -->
-    <div class="resume-role">
-        <h3>Senior Data Analyst · MuleSoft (Salesforce)</h3>
-        <p><em>January 2022 – September 2022</em></p>
-        <ul>
-            <li>Led account benchmarking and usage profiling for advisory and portfolio teams</li>
-            <li>Conducted retention analysis across 4,000+ accounts</li>
-        </ul>
-    </div>
+            <!-- MuleSoft -->
+            <div class="resume-role">
+                <h3>Senior Data Analyst &middot; MuleSoft (Salesforce)</h3>
+                <p><em>January 2022 &ndash; September 2022</em></p>
+                <ul>
+                    <li>Built account benchmarking across <span class="stat">25+ dimensions</span> for <span class="stat">~3k partner accounts</span>, evolving from descriptive to predictive next-best-course recommendations used directly by advisory teams</li>
+                    <li>Conducted certification retention analysis across <span class="stat">4k+ accounts</span>, partnering with advisory and partnerships to reshape offerings</li>
+                    <li>Co-developed scalable KPIs with senior leadership that set global targets</li>
+                </ul>
+            </div>
 
-    <hr class="resume-divider">
+            <hr class="resume-divider">
 
-    <!-- Microsoft -->
-    <div class="resume-role">
-        <h3>Supply Chain Manager · Microsoft</h3>
-        <p><em>August 2020 – December 2021</em></p>
-        <ul>
-            <li>Managed $100M inventory demand planning for Surface products</li>
-            <li>Built forecasting and contingency models during global supply disruption</li>
-        </ul>
-    </div>
+            <!-- Microsoft -->
+            <div class="resume-role">
+                <h3>Supply Chain Manager &middot; Microsoft</h3>
+                <p><em>August 2020 &ndash; December 2021</em></p>
+                <ul>
+                    <li>Managed demand planning coordination for <span class="stat">1,000+ SKUs across 24 regions</span>, working across 6 functions during COVID and Suez disruptions</li>
+                    <li>Presented data-driven trade-offs and allocation recommendations to Director-level leadership across a <span class="stat">$100M portfolio</span></li>
+                </ul>
+            </div>
 
-    <hr class="resume-divider">
+            <hr class="resume-divider">
 
-    <!-- Brown Thomas -->
-    <div class="resume-role">
-        <h3>CRM Analyst · Brown Thomas</h3>
-        <p><em>August 2018 – August 2020</em></p>
-        <ul>
-            <li>Built customer segmentation models to support targeted engagement</li>
-            <li>Led Salesforce CRM migration improving data quality and usability</li>
-        </ul>
-    </div>
+            <!-- Brown Thomas -->
+            <div class="resume-role">
+                <h3>CRM Analyst &middot; Brown Thomas</h3>
+                <p><em>August 2018 &ndash; August 2020</em></p>
+                <ul>
+                    <li>Customer segmentation and churn modelling using SQL and R. Reactivated <span class="stat">~4k dormant customers</span> and doubled email engagement (<span class="stat">20% &rarr; 35&ndash;40%</span>)</li>
+                    <li>Led CRM migration to Salesforce, improving data utilisation and GDPR compliance</li>
+                </ul>
+            </div>
 
-</article>
-
-
+        </article>
 
         <!-- Profile Section -->
         <div class="section-header" id="about">
@@ -788,10 +717,10 @@
                 <h4>Personal Life</h4>
                 <ul class="profile-list">
                     <li>9 years married to my amazing wife Emer</li>
-                    <li>Dad to James (8) & Hannah (5)</li>
-                    <li>Born & raised in Westmeath, Ireland</li>
+                    <li>Dad to James (8) &amp; Hannah (5)</li>
+                    <li>Born &amp; raised in Westmeath, Ireland</li>
                     <li>No.5 of a family of 6</li>
-                    <li>INTP & Level 2 Chef</li>
+                    <li>INTP &amp; Level 2 Chef</li>
                 </ul>
                 <p class="profile-note">When I'm not at work: experimenting with recipes, working on personal projects, nature walks, swinging kettlebells, carrying heavy things for a long time.</p>
             </div>
@@ -801,30 +730,30 @@
                 <ul class="profile-list">
                     <li>Family time</li>
                     <li>Developing new skills</li>
-                    <li>Brainstorming & debating ideas</li>
+                    <li>Brainstorming &amp; debating ideas</li>
                     <li>Healthy competition</li>
                     <li>Positivity</li>
                     <li>Walking without headphones</li>
                 </ul>
                 <blockquote class="profile-quote">
                     "To develop working ideas efficiently, I try to fail as fast as I can."
-                    <cite>— Richard Feynman</cite>
+                    <cite>&mdash; Richard Feynman</cite>
                 </blockquote>
             </div>
 
             <div class="profile-card">
-                <h4>I'm Good At</h4>
+                <h4>How I Work</h4>
                 <ul class="profile-list">
-                    <li>Viewing situations from multiple POVs</li>
-                    <li>Practical problem solving</li>
-                    <li>Building simple MVPs</li>
-                    <li>Communicating ideas simply & effectively</li>
-                    <li>Creating stories to support decision making</li>
-                    <li>Analytical approach to problems</li>
+                    <li>Translate complex data into clear narratives</li>
+                    <li>Build trust through stakeholder partnership</li>
+                    <li>Prototype fast, validate thoroughly</li>
+                    <li>Prioritise impact over complexity</li>
+                    <li>Create serviceable knowledge, not dependencies</li>
+                    <li>Present to any audience &mdash; IC to C-suite</li>
                 </ul>
                 <blockquote class="profile-quote">
                     "Life isn't about finding yourself. Life is about creating yourself."
-                    <cite>— George Bernard Shaw</cite>
+                    <cite>&mdash; George Bernard Shaw</cite>
                 </blockquote>
             </div>
         </div>
@@ -835,7 +764,6 @@
         </div>
 
         <div class="projects-grid">
-            <!-- Project 1: Irish Housing Crisis - STRONGEST PROJECT -->
             <article class="project-card featured">
                 <div class="featured-badge">Featured</div>
                 <h3>Irish Housing Crisis Analysis</h3>
@@ -846,23 +774,18 @@
                     <span class="tech-tag">XGBoost</span>
                     <span class="tech-tag">Statistical Testing</span>
                 </div>
-                <p>
-                    End-to-end analysis of the UK & Ireland housing crisis combining multi-source data integration, 
-                    Twitter sentiment analysis, and predictive time series modelling with rigorous statistical validation.
-                </p>
+                <p>End-to-end analysis of the UK &amp; Ireland housing crisis combining multi-source data integration, Twitter sentiment analysis, and predictive time series modelling with rigorous statistical validation.</p>
                 <ul>
                     <li>Multi-country data pipeline (IE, UK, World Bank)</li>
                     <li>NLP sentiment classification with FNN</li>
                     <li>Hypothesis testing with statistical interpretation</li>
-                    <li>ARIMA & XGBoost forecasting comparison</li>
+                    <li>ARIMA &amp; XGBoost forecasting comparison</li>
                 </ul>
                 <a href="https://github.com/lcroash/MSC_SEM1_CA2/blob/main/CA2.ipynb" class="project-link" target="_blank" rel="noopener">
-                    View Project
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    View Project <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </article>
 
-            <!-- Project 2: Instacart Clustering -->
             <article class="project-card">
                 <h3>Customer Segmentation at Scale</h3>
                 <div class="tech-tags">
@@ -871,10 +794,7 @@
                     <span class="tech-tag">Big Data</span>
                     <span class="tech-tag">Scikit-learn</span>
                 </div>
-                <p>
-                    Customer segmentation using 32M+ Instacart transactions to enable targeted marketing. 
-                    Develops RFM-style metrics and dietary preference tagging through text analysis.
-                </p>
+                <p>Customer segmentation using 32M+ Instacart transactions to enable targeted marketing. Develops RFM-style metrics and dietary preference tagging through text analysis.</p>
                 <ul>
                     <li>32M transaction dataset processing</li>
                     <li>RFM matrix development</li>
@@ -882,12 +802,10 @@
                     <li>Actionable segment definitions</li>
                 </ul>
                 <a href="https://github.com/lcroash/clustering_project/blob/master/Project_Final.ipynb" class="project-link" target="_blank" rel="noopener">
-                    View Project
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    View Project <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </article>
 
-            <!-- Project 3: Bangalore House Prices - NEW ADDITION -->
             <article class="project-card">
                 <h3>Bangalore House Price Prediction</h3>
                 <div class="tech-tags">
@@ -896,10 +814,7 @@
                     <span class="tech-tag">Cross-Validation</span>
                     <span class="tech-tag">Outlier Detection</span>
                 </div>
-                <p>
-                    Predictive modelling for Bangalore real estate with extensive feature engineering, 
-                    statistical outlier detection, and model comparison using cross-validation.
-                </p>
+                <p>Predictive modelling for Bangalore real estate with extensive feature engineering, statistical outlier detection, and model comparison using cross-validation.</p>
                 <ul>
                     <li>Multi-format data standardisation</li>
                     <li>Statistical outlier removal with reasoning</li>
@@ -907,12 +822,10 @@
                     <li>Linear vs Decision Tree comparison</li>
                 </ul>
                 <a href="https://github.com/lcroash/bangalore_houses/blob/master/Bangalore_House_Price_Prediction.ipynb" class="project-link" target="_blank" rel="noopener">
-                    View Project
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    View Project <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </article>
 
-            <!-- Project 4: Zomato Analysis -->
             <article class="project-card">
                 <h3>Zomato Market Analysis</h3>
                 <div class="tech-tags">
@@ -921,10 +834,7 @@
                     <span class="tech-tag">Text Processing</span>
                     <span class="tech-tag">Folium</span>
                 </div>
-                <p>
-                    Geospatial market analysis of Bangalore restaurants using Zomato API data. 
-                    Identifies market saturation zones and predicts restaurant ratings.
-                </p>
+                <p>Geospatial market analysis of Bangalore restaurants using Zomato API data. Identifies market saturation zones and predicts restaurant ratings.</p>
                 <ul>
                     <li>Interactive heatmap visualizations</li>
                     <li>Market saturation analysis</li>
@@ -932,8 +842,7 @@
                     <li>Cuisine density mapping</li>
                 </ul>
                 <a href="https://github.com/lcroash/zomato/blob/master/Zomato_Restaurant_Analysis.ipynb" class="project-link" target="_blank" rel="noopener">
-                    View Project
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    View Project <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </article>
         </div>
@@ -944,57 +853,50 @@
         </div>
 
         <div class="articles-grid">
+            <a href="https://medium.com/@lcroash/less-is-more-choosing-impact-over-complexity-88c0d828ccf5" class="article-card" target="_blank" rel="noopener">
+                <span class="article-category">Data Strategy</span>
+                <h4>Less is More: Choosing Impact over Complexity</h4>
+                <p>Why simpler solutions often deliver more value than sophisticated models.</p>
+                <span class="read-more">Read on Medium &rarr;</span>
+            </a>
             <a href="https://medium.com/@lcroash/communicating-with-stakeholders-translating-data-into-decisions-14dfc6f354c3" class="article-card" target="_blank" rel="noopener">
                 <span class="article-category">Stakeholder Management</span>
                 <h4>Communicating with Stakeholders: Translating Data into Decisions</h4>
                 <p>How to bridge the gap between technical analysis and business impact.</p>
-                <span class="read-more">Read on Medium →</span>
+                <span class="read-more">Read on Medium &rarr;</span>
             </a>
             <a href="https://medium.com/@lcroash/stop-guessing-what-stakeholders-want-a-guide-to-getting-clear-requests-75e76f277e6b" class="article-card" target="_blank" rel="noopener">
                 <span class="article-category">Requirements Gathering</span>
                 <h4>Stop Guessing What Stakeholders Want</h4>
                 <p>A practical guide to getting clear requests and avoiding wasted analysis.</p>
-                <span class="read-more">Read on Medium →</span>
-            </a>
-            <a href="https://medium.com/@lcroash/less-is-more-choosing-impact-over-complexity-88c0d828ccf5" class="article-card" target="_blank" rel="noopener">
-                <span class="article-category">Data Strategy</span>
-                <h4>Less is More: Choosing Impact over Complexity</h4>
-                <p>Why simpler solutions often deliver more value than sophisticated models.</p>
-                <span class="read-more">Read on Medium →</span>
+                <span class="read-more">Read on Medium &rarr;</span>
             </a>
         </div>
 
         <!-- Footer -->
         <footer class="footer">
-            <p>More projects on <a href="https://github.com/lcroash" target="_blank" rel="noopener">GitHub</a> · More writing on <a href="https://medium.com/@lcroash" target="_blank" rel="noopener">Medium</a></p>
+            <p>More projects on <a href="https://github.com/lcroash" target="_blank" rel="noopener">GitHub</a> &middot; More writing on <a href="https://medium.com/@lcroash" target="_blank" rel="noopener">Medium</a></p>
         </footer>
     </div>
+
     <script>
         const navLinks = document.querySelectorAll('.floating-nav a');
         const sections = Array.from(navLinks).map(link =>
             document.querySelector(link.getAttribute('href'))
         );
-    
         const observer = new IntersectionObserver(
             entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         navLinks.forEach(link => {
-                            link.classList.toggle(
-                                'active',
-                                link.getAttribute('href') === `#${entry.target.id}`
-                            );
+                            link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
                         });
                     }
                 });
             },
             { rootMargin: '-40% 0px -40% 0px' }
         );
-    
-        sections.forEach(section => {
-            if (section) observer.observe(section);
-        });
+        sections.forEach(section => { if (section) observer.observe(section); });
     </script>
-    
 </body>
 </html>
